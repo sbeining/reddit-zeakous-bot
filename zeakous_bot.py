@@ -44,7 +44,12 @@ def process_comment(comment):
         if not re.search("zealous", line, re.IGNORECASE):
             continue
 
-        replyBody = "> " + pattern.sub("**ZEAKOUS**", line) + "\n\n" + "\"I've been memed again!\" -/u/lbibass "
+        replyBody = "> " + pattern.sub("**ZEAKOUS**", line)
+        replyBody += "\n"
+        replyBody += "\n"
+        replyBody += "---"
+        replyBody += "\n"
+        replyBody += "^^\"I've&#32;been&#32;memed&#32;again!\"&#32;-/u/lbibass"
 
         comment.reply(replyBody)
 
